@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:sysml="http://www.omg.org/spec/SysML/20100301/SysML-profile" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <uml:Model xmi:id="p902221093920902572">
+    <name>Model 1</name>
+    <packagedElement xmi:id="p655522918286208236">
+      <ownedComment xmi:id="di313976561664717866" xmi:type="uml:Comment">
+        <body>Estado inicial. Por ej: la muestra llegó y está en el freezer pero algo impide empezar el análisis.</body>
+        <annotatedElement xmi:idref="di612531431124360262" />
+      </ownedComment>
+      <ownedComment xmi:id="di838541922953789510" xmi:type="uml:Comment">
+        <body>Pericia en ejecución
+</body>
+        <annotatedElement xmi:idref="di387659254952642095" />
+      </ownedComment>
+      <ownedComment xmi:id="di418216384396675740" xmi:type="uml:Comment">
+        <body>Finalizada la corrida en el equipo pero no generado el reporte
+</body>
+        <annotatedElement xmi:idref="di129926805927637970" />
+      </ownedComment>
+      <ownedComment xmi:id="di586844314816750552" xmi:type="uml:Comment">
+        <body>Reporte generado y enviado</body>
+        <annotatedElement xmi:idref="di676493299372599056" />
+      </ownedComment>
+      <ownedComment xmi:id="di640029153218707091" xmi:type="uml:Comment">
+        <body>Pericia marcada como inválida</body>
+        <annotatedElement xmi:idref="di430404050614660270" />
+      </ownedComment>
+      <packagedElement xmi:id="di422642237595463267" xmi:type="uml:Class">
+        <name>SRSRequestState</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a8183faffda9e4a6d83b764972cfd4a83729" xmi:type="uml:Property">
+          <name>requestOwner</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a75ecd1b85c6a410bb17f9a2572f84d1f636" xmi:type="uml:Property">
+          <name>reason</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Python.str" />
+        </ownedAttribute>
+        <ownedOperation xmi:id="odf09e9d45f1543ebad1023de44e65628917" xmi:type="uml:Operation">
+          <name>run</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="odf09e9d45f1543ebad1023de44e65628917_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o08595f1056094e6a81ba19b26b68ecda274" xmi:type="uml:Operation">
+          <name>report</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o08595f1056094e6a81ba19b26b68ecda274_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o13aa01f4f25c486c851a9ef8c50946cd569" xmi:type="uml:Operation">
+          <name>statusUserText</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o13aa01f4f25c486c851a9ef8c50946cd569_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oac6520c966994dcaaf7ed3d9f947e5c8929" xmi:type="uml:Operation">
+          <name>finalize</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oac6520c966994dcaaf7ed3d9f947e5c8929_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o865b4b122e1341699934bb6b4d1aaf0b629" xmi:type="uml:Operation">
+          <name>reason</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="p33f5f7a6b56e435cb7019a913509f50d" xmi:type="uml:Parameter">
+            <name>reasonString</name>
+            <type xmi:idref="Python.str" />
+          </ownedParameter>
+          <ownedParameter xmi:id="o865b4b122e1341699934bb6b4d1aaf0b629_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o791ee96dedc443f5a494a43b7c0f428459" xmi:type="uml:Operation">
+          <name>cancel</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o791ee96dedc443f5a494a43b7c0f428459_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o631d98321e504269aa3cad1fdabe2f84107" xmi:type="uml:Operation">
+          <name>previousState</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o631d98321e504269aa3cad1fdabe2f84107_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="ob288f663ec9a4090973195d260e94718938" xmi:type="uml:Operation">
+          <name>nextState</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="ob288f663ec9a4090973195d260e94718938_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di640560959896201338_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di572136753636360218" />
+          <association xmi:idref="di640560959896201338" />
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <generalization xmi:id="di170085818992224761" xmi:type="uml:Generalization">
+          <general xmi:idref="di636599701409539479" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di430404050614660270" xmi:type="uml:Class">
+        <name>SRSInvalidRequest</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="ad68d2e61a52a4a4a9c3631b391f1e78e823" xmi:type="uml:Property">
+          <name>isResumable</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Python.bool" />
+        </ownedAttribute>
+        <ownedOperation xmi:id="of2797e3c8f2c476b8c3f25c3097be86575" xmi:type="uml:Operation">
+          <name>finalize</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="of2797e3c8f2c476b8c3f25c3097be86575_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="ob408d10e38f1445297da625ec8b92110898" xmi:type="uml:Operation">
+          <name>resume</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="ob408d10e38f1445297da625ec8b92110898_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di283145792975811608" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di387659254952642095" xmi:type="uml:Class">
+        <name>SRSRunningRequest</name>
+        <isAbstract>false</isAbstract>
+        <ownedOperation xmi:id="o7aa8c41ef02942e5900ad77e8a31f1e1899" xmi:type="uml:Operation">
+          <name>pause</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o7aa8c41ef02942e5900ad77e8a31f1e1899_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o9edfe427d131487d8a14da43b3d22799825" xmi:type="uml:Operation">
+          <name>executionTime</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o9edfe427d131487d8a14da43b3d22799825_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di734407057504872300" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di612531431124360262" xmi:type="uml:Class">
+        <name>SRSWaitRequestState</name>
+        <isAbstract>false</isAbstract>
+        <ownedOperation xmi:id="oebc37523b65943bd9a4f565dbb7de2a7962" xmi:type="uml:Operation">
+          <name>resume</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oebc37523b65943bd9a4f565dbb7de2a7962_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o56e1379f12d74404a9f593cec4a89d15608" xmi:type="uml:Operation">
+          <name>wait</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="p57690fb9480e4f138c1cede5e00805e8" xmi:type="uml:Parameter">
+            <name>timeout</name>
+            <type xmi:idref="Python.int" />
+          </ownedParameter>
+          <ownedParameter xmi:id="o56e1379f12d74404a9f593cec4a89d15608_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di300932247937418321" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di129926805927637970" xmi:type="uml:Class">
+        <name>SRSFinishedRequestState</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a9787f679d4444fd0b3a4d1c3e5839272979" xmi:type="uml:Property">
+          <name>endDate</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o9111828f736a42859171fb9a3572f4f6479" xmi:type="uml:Operation">
+          <name>endDate</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o9111828f736a42859171fb9a3572f4f6479_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di328785323723061134" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di444458092454483018" xmi:type="uml:Class">
+        <name>SRSCancelledRequest</name>
+        <isAbstract>false</isAbstract>
+        <generalization xmi:id="di826124150340999612" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di792420281424052451" xmi:type="uml:Class">
+        <name>SRSApplication</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="aa2ce965aa7a847029cb3315661929a9854" xmi:type="uml:Property">
+          <name>uniqueInstance</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a7e02e943c6af415d87e055bd819bc27e94" xmi:type="uml:Property">
+          <name>requests</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ab51a2efae508479e968d0059636d0d61531" xmi:type="uml:Property">
+          <name>userManager</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a3fdab98af04b470581d7bcbf14fa6a27611" xmi:type="uml:Property">
+          <name>breeds</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="aab8f783022ac48f3b898e43cadbce1f6549" xmi:type="uml:Property">
+          <name>results</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di793759043929758324_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di635912758162893135" />
+          <association xmi:idref="di793759043929758324" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di701024275912732591_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di572136753636360218" />
+          <association xmi:idref="di701024275912732591" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di670918035541682298_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di923598706981979182" />
+          <association xmi:idref="di670918035541682298" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di504004588357339047_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di861383858689373270" />
+          <association xmi:idref="di504004588357339047" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di553287720621915995_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di860661463197406296" />
+          <association xmi:idref="di553287720621915995" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di751486888546201866" xmi:type="uml:Class">
+        <name>SRSRun</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a684cb77c100645248d46ad41730f4a42136" xmi:type="uml:Property">
+          <name>startDate</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a0803140321914a769605814e6f4cdf72119" xmi:type="uml:Property">
+          <name>endDate</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a08029917cab648e4ac8be95c380bc68e133" xmi:type="uml:Property">
+          <name>runState</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o55cce3c3e50c4dbf8f49f710d95fceae287" xmi:type="uml:Operation">
+          <name>startDate</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o55cce3c3e50c4dbf8f49f710d95fceae287_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o30589478e3bf4bd1a2b71617171cd618129" xmi:type="uml:Operation">
+          <name>endDate</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o30589478e3bf4bd1a2b71617171cd618129_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o0c0aa81dec7a426dbc78cd27d935b729879" xmi:type="uml:Operation">
+          <name>runState</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o0c0aa81dec7a426dbc78cd27d935b729879_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di745270462587070429_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di533626477554280719" />
+          <association xmi:idref="di745270462587070429" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di861383858689373270" xmi:type="uml:Class">
+        <name>SRSAnimal</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a41b95a79183e498791440eee56b808e8778" xmi:type="uml:Property">
+          <name>animalCode</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a3f4084b325be4e6289e6aaa0d54fbabc840" xmi:type="uml:Property">
+          <name>sex</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a25aae95765ad440ebcf4b1c85e54de40371" xmi:type="uml:Property">
+          <name>breed</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a9d8c45a9112644e080e6e58bd31a54d7152" xmi:type="uml:Property">
+          <name>species</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a0b777e5b0dce4d94a7e1fc675a6e351774" xmi:type="uml:Property">
+          <name>territory</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ae8c20e02aaf64c88afd3ce4190aaf7c3522" xmi:type="uml:Property">
+          <name>father</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a1afc087b8f164148af7d4fc69a787e4e858" xmi:type="uml:Property">
+          <name>mother</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o091d563646e446f68ae3022bf4063e86801" xmi:type="uml:Operation">
+          <name>animalCode</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o091d563646e446f68ae3022bf4063e86801_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="obe8650fdd9a2421a94a2c8e5c8e7f8b020" xmi:type="uml:Operation">
+          <name>sex</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="obe8650fdd9a2421a94a2c8e5c8e7f8b020_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o41e6609a4c094c3cba962ef97677041b566" xmi:type="uml:Operation">
+          <name>breed</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o41e6609a4c094c3cba962ef97677041b566_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="off08a7cbf100438f88a01c1b715cb789972" xmi:type="uml:Operation">
+          <name>species</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="off08a7cbf100438f88a01c1b715cb789972_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o2c51c8dd465b4b1eb026f0dd14931796940" xmi:type="uml:Operation">
+          <name>location</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o2c51c8dd465b4b1eb026f0dd14931796940_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o1d8e4e1938044651b8bda95ff0cfc657449" xmi:type="uml:Operation">
+          <name>father</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o1d8e4e1938044651b8bda95ff0cfc657449_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o25a75a299ba440d98207994f86f32132889" xmi:type="uml:Operation">
+          <name>mother</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o25a75a299ba440d98207994f86f32132889_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di714577234927884083_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di533626477554280719" />
+          <association xmi:idref="di714577234927884083" />
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di219602558644580521_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di635912758162893135" />
+          <association xmi:idref="di219602558644580521" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di504004588357339047_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di792420281424052451" />
+          <association xmi:idref="di504004588357339047" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di714577234927884083" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di714577234927884083_er" />
+        <memberEnd xmi:idref="di714577234927884083_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di635912758162893135" xmi:type="uml:Class">
+        <name>SRSBreed</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a1fd7adf9016b4522b5a950682e79218c481" xmi:type="uml:Property">
+          <name>name</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a58ea35ee8f0e4248a3c389729fc7925f855" xmi:type="uml:Property">
+          <name>synonyms</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a065a2bd23c6d42408d52f1f168e74ae3292" xmi:type="uml:Property">
+          <name>locations</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o5010ebeeddec42f3805b9dbb23653a31855" xmi:type="uml:Operation">
+          <name>name</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o5010ebeeddec42f3805b9dbb23653a31855_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o2d40795b02c140c1876c66281ed844c4402" xmi:type="uml:Operation">
+          <name>synonyms</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o2d40795b02c140c1876c66281ed844c4402_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oaf25d527672f4a90ab3808fada85a80a871" xmi:type="uml:Operation">
+          <name>locations</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oaf25d527672f4a90ab3808fada85a80a871_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di793759043929758324_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di792420281424052451" />
+          <association xmi:idref="di793759043929758324" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di847438816346144572_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di972630974475732897" />
+          <association xmi:idref="di847438816346144572" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di219602558644580521_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di861383858689373270" />
+          <association xmi:idref="di219602558644580521" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di923598706981979182" xmi:type="uml:Class">
+        <name>SRSUserManager</name>
+        <isAbstract>false</isAbstract>
+        <ownedOperation xmi:id="o00f9213a0c654b1e90d117cb7ea86452574" xmi:type="uml:Operation">
+          <name>srsUsers</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o00f9213a0c654b1e90d117cb7ea86452574_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o4551273c6b2e47b88b862baaab8d0d70949" xmi:type="uml:Operation">
+          <name>srsAddUser</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o4551273c6b2e47b88b862baaab8d0d70949_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o60b9c4024f5b49caaa5b5b92dc271351183" xmi:type="uml:Operation">
+          <name>srsRemoveUser</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o60b9c4024f5b49caaa5b5b92dc271351183_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oec1d00da66074bf381aad58ebedce390511" xmi:type="uml:Operation">
+          <name>srsUserNamed</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oec1d00da66074bf381aad58ebedce390511_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di670918035541682298_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di792420281424052451" />
+          <association xmi:idref="di670918035541682298" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di904346294890722371" xmi:type="uml:Class">
+        <name>SRSMarker</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a03b092ef9b7144d789b128cc99939d9a193" xmi:type="uml:Property">
+          <name>sourcePlatform</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ad8b7792904704222b2904c4694de294f974" xmi:type="uml:Property">
+          <name>markerName</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a211d6757e3d04aa7b0508fbe450d89e8911" xmi:type="uml:Property">
+          <name>markerValue</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a83724bf0d7dc484ebe965540526736ea457" xmi:type="uml:Property">
+          <name>requestSample</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a19bda5a29efe496a8ee38786f305df61655" xmi:type="uml:Property">
+          <name>chromosomeName</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o3a52a1df907946de82f3ef349a5b8b73598" xmi:type="uml:Operation">
+          <name>sourcePlatform</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o3a52a1df907946de82f3ef349a5b8b73598_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o60c375c7c8174dc9a97b4918b7369adc364" xmi:type="uml:Operation">
+          <name>markerName</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o60c375c7c8174dc9a97b4918b7369adc364_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o8bc8fd9cc2424ed9a46b03b524984cd8114" xmi:type="uml:Operation">
+          <name>markerValue</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o8bc8fd9cc2424ed9a46b03b524984cd8114_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o06e5fdcfbc67430cb5b0e61fdf025a42378" xmi:type="uml:Operation">
+          <name>requestSample</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o06e5fdcfbc67430cb5b0e61fdf025a42378_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o211fa48b3a264364bf2c87e7c73a13bd112" xmi:type="uml:Operation">
+          <name>chromosomeName</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o211fa48b3a264364bf2c87e7c73a13bd112_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di226959375494634580_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di533626477554280719" />
+          <association xmi:idref="di226959375494634580" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di226959375494634580" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di226959375494634580_er" />
+        <memberEnd xmi:idref="di226959375494634580_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di745270462587070429" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di745270462587070429_er" />
+        <memberEnd xmi:idref="di745270462587070429_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di513861262944051806" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di513861262944051806_er" />
+        <memberEnd xmi:idref="di513861262944051806_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di640560959896201338" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di640560959896201338_er" />
+        <memberEnd xmi:idref="di640560959896201338_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di915961448860912595" xmi:type="uml:Class">
+        <name>SRSUser</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="af2f8fb5798d84365bcf0655688e64a17481" xmi:type="uml:Property">
+          <name>userRole</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a0926fede1f1148acb40c6a3d35a5d713576" xmi:type="uml:Property">
+          <name>userAddress</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a78228c16721245b28cb0422444136d29107" xmi:type="uml:Property">
+          <name>userIdType</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a01ff62f436e9448d969e7d1bd058b90e498" xmi:type="uml:Property">
+          <name>userId</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o06ab3fa3f29a454bb0a0e666a655bb95263" xmi:type="uml:Operation">
+          <name>userAddress</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o06ab3fa3f29a454bb0a0e666a655bb95263_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o884dc8c7eedc4e958873ed592c6bda8c826" xmi:type="uml:Operation">
+          <name>userIdType</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o884dc8c7eedc4e958873ed592c6bda8c826_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o217bcddd540d461fa6d0ea9beb2a6ed060" xmi:type="uml:Operation">
+          <name>userId</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o217bcddd540d461fa6d0ea9beb2a6ed060_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di399894007221231927_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di784809487503007872" />
+          <association xmi:idref="di399894007221231927" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di784809487503007872" xmi:type="uml:Class">
+        <name>SRSUserRole</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="di399894007221231927_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di915961448860912595" />
+          <association xmi:idref="di399894007221231927" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di399894007221231927" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di399894007221231927_er" />
+        <memberEnd xmi:idref="di399894007221231927_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di793759043929758324" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di793759043929758324_er" />
+        <memberEnd xmi:idref="di793759043929758324_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di504004588357339047" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di504004588357339047_er" />
+        <memberEnd xmi:idref="di504004588357339047_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di701024275912732591" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di701024275912732591_er" />
+        <memberEnd xmi:idref="di701024275912732591_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di972630974475732897" xmi:type="uml:Class">
+        <name>SRSLocation</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a921ad5787ca94c4e89e27144751606d5923" xmi:type="uml:Property">
+          <name>breeds</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a2dbe1be3ed3b493cbe107239bc87bf93154" xmi:type="uml:Property">
+          <name>names</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="oe11384875ff04a0fbc2d59e8ec770790797" xmi:type="uml:Operation">
+          <name>breeds</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oe11384875ff04a0fbc2d59e8ec770790797_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oe9d81b87baa44300a1a8f1fd06deaf07764" xmi:type="uml:Operation">
+          <name>name</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oe9d81b87baa44300a1a8f1fd06deaf07764_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o36506b547f7e462ca7ef0d9263cbcaba577" xmi:type="uml:Operation">
+          <name>names</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o36506b547f7e462ca7ef0d9263cbcaba577_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di847438816346144572_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di635912758162893135" />
+          <association xmi:idref="di847438816346144572" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di847438816346144572" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di847438816346144572_er" />
+        <memberEnd xmi:idref="di847438816346144572_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di670918035541682298" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di670918035541682298_er" />
+        <memberEnd xmi:idref="di670918035541682298_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di676493299372599056" xmi:type="uml:Class">
+        <name>SRSReportedRequestState</name>
+        <isAbstract>false</isAbstract>
+        <generalization xmi:id="di902342801946298109" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di572136753636360218" xmi:type="uml:Class">
+        <name>SRSRequest</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a30fd965f4a254737b3fb9aad708dfb83428" xmi:type="uml:Property">
+          <name>requestState</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="af0ecb1fbd58547a3abededfb145a7ffa490" xmi:type="uml:Property">
+          <name>requestName</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="abc2671d38ba34ae8b744d9759569ce976" xmi:type="uml:Property">
+          <name>requestOwner</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a427052bfb3e641baa5c04b91d273ad19429" xmi:type="uml:Property">
+          <name>requestReport</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="ofe7599d73f9a4419883ee04c8798e30b710" xmi:type="uml:Operation">
+          <name>renameRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="ofe7599d73f9a4419883ee04c8798e30b710_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o4e2f3c4df7864b0db081a01bd100cdd8912" xmi:type="uml:Operation">
+          <name>requestOwner</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o4e2f3c4df7864b0db081a01bd100cdd8912_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o98539f41b0e741f88041ab8b6b84e321210" xmi:type="uml:Operation">
+          <name>cancelRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o98539f41b0e741f88041ab8b6b84e321210_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o13bd2b9436da44429640c55e1a3af0df538" xmi:type="uml:Operation">
+          <name>executeRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o13bd2b9436da44429640c55e1a3af0df538_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o7ae7c34436d440f180fb4058b2809890101" xmi:type="uml:Operation">
+          <name>finalizeRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o7ae7c34436d440f180fb4058b2809890101_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o223da52b91554165b1642f5c9050d567617" xmi:type="uml:Operation">
+          <name>cancelRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o223da52b91554165b1642f5c9050d567617_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o6d297757f37b46d180f8090051d885e939" xmi:type="uml:Operation">
+          <name>pauseRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o6d297757f37b46d180f8090051d885e939_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o6e3ea266c2b84593a9baf4b0485122ff431" xmi:type="uml:Operation">
+          <name>report</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o6e3ea266c2b84593a9baf4b0485122ff431_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o962cab4c2c2b461c98ca802324ce4f79730" xmi:type="uml:Operation">
+          <name>samples</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o962cab4c2c2b461c98ca802324ce4f79730_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o70941f85e6ea4bc39443a36b0585d0f3296" xmi:type="uml:Operation">
+          <name>isReported</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o70941f85e6ea4bc39443a36b0585d0f3296_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="ob33d1d5ff0bf4bbdbdf1a349404a6480499" xmi:type="uml:Operation">
+          <name>isFinished</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="ob33d1d5ff0bf4bbdbdf1a349404a6480499_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oa88bd0e669184f1bb04e29dc03522177437" xmi:type="uml:Operation">
+          <name>isCanceled</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oa88bd0e669184f1bb04e29dc03522177437_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o89ed2bbc50d14bb9a24a49662eb86cbc188" xmi:type="uml:Operation">
+          <name>isInvalid</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o89ed2bbc50d14bb9a24a49662eb86cbc188_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o3c50e511ff0d44d98edaed7859a5441a564" xmi:type="uml:Operation">
+          <name>isRunning</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o3c50e511ff0d44d98edaed7859a5441a564_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="od90cdda2b74b42bfa1e8516b8397696a583" xmi:type="uml:Operation">
+          <name>isPaid</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="od90cdda2b74b42bfa1e8516b8397696a583_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oa28a1fd985504d4cbc9a9261e35d8875929" xmi:type="uml:Operation">
+          <name>validStates</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oa28a1fd985504d4cbc9a9261e35d8875929_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di513861262944051806_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di533626477554280719" />
+          <association xmi:idref="di513861262944051806" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di640560959896201338_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di422642237595463267" />
+          <association xmi:idref="di640560959896201338" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di701024275912732591_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di792420281424052451" />
+          <association xmi:idref="di701024275912732591" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+        <generalization xmi:id="di657136560784460698" xmi:type="uml:Generalization">
+          <general xmi:idref="di636599701409539479" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di533626477554280719" xmi:type="uml:Class">
+        <name>SRSRequestSample</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a039d5a6f58984634bf4c073f37bac6ae856" xmi:type="uml:Property">
+          <name>sampleRuns</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a77142be9deb5417eb1b72ef09a640257902" xmi:type="uml:Property">
+          <name>sampleMarkers</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ae8eb3d8a2ef1417985ae395b821d8b38683" xmi:type="uml:Property">
+          <name>sampleIndividual</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a3a873067cf7842f18a4ff456fe33ebb0822" xmi:type="uml:Property">
+          <name>sampleCode</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ad586386a04484b408904752f40e6e37125" xmi:type="uml:Property">
+          <name>sampleCreationDate</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a3d027facf92f40c08ecdc2825733ae60388" xmi:type="uml:Property">
+          <name>sampleBarCode</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="af131c893be2e46de84a4537999ed44a7321" xmi:type="uml:Property">
+          <name>dateEntered</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ade0f2c64be7a4adba0dfafbebbd105cc119" xmi:type="uml:Property">
+          <name>receivedBy</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a648409cea21641d6b60467f758168103968" xmi:type="uml:Property">
+          <name>location</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="oc055d1fec19c4680b07ba5ea1c0298ee527" xmi:type="uml:Operation">
+          <name>sampleMarkers</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oc055d1fec19c4680b07ba5ea1c0298ee527_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="od04f441682434d39944f4df7773a7f29245" xmi:type="uml:Operation">
+          <name>sampleRuns</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="od04f441682434d39944f4df7773a7f29245_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o12dc672089214092a82ec05ffcc194cb541" xmi:type="uml:Operation">
+          <name>sampleIndividual</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o12dc672089214092a82ec05ffcc194cb541_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="ob00e2584cb2640d4aa1ac6a24382a99e649" xmi:type="uml:Operation">
+          <name>sampleCreationDate</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="ob00e2584cb2640d4aa1ac6a24382a99e649_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o854278de718146c68133cab2a7b01a61383" xmi:type="uml:Operation">
+          <name>sampleCode</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o854278de718146c68133cab2a7b01a61383_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o33dfd5fd4dbe47be82765a75e6cd3309207" xmi:type="uml:Operation">
+          <name>sampleRequest</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o33dfd5fd4dbe47be82765a75e6cd3309207_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o4bfee912761a46869081396a9662456b186" xmi:type="uml:Operation">
+          <name>sampleBarCode</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o4bfee912761a46869081396a9662456b186_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o9694c1075fd84f1cbb9ede270f933c80344" xmi:type="uml:Operation">
+          <name>receivedBy</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o9694c1075fd84f1cbb9ede270f933c80344_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="oc876775cc53443c78dc5dad45c9a8a55632" xmi:type="uml:Operation">
+          <name>location</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="oc876775cc53443c78dc5dad45c9a8a55632_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di226959375494634580_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di904346294890722371" />
+          <association xmi:idref="di226959375494634580" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di513861262944051806_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di572136753636360218" />
+          <association xmi:idref="di513861262944051806" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+        <generalization xmi:id="di713290978248626551" xmi:type="uml:Generalization">
+          <general xmi:idref="di636599701409539479" />
+        </generalization>
+        <ownedAttribute xmi:id="di745270462587070429_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di751486888546201866" />
+          <association xmi:idref="di745270462587070429" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di206771580874484484_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di585526670897986403" />
+          <association xmi:idref="di206771580874484484" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="di714577234927884083_er" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di861383858689373270" />
+          <association xmi:idref="di714577234927884083" />
+          <aggregation>none</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di636599701409539479" xmi:type="uml:Class">
+        <name>SRSObject</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="aef95a042133945c9afdb786d36e7a097228" xmi:type="uml:Property">
+          <name>comments</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a51f9787bcab94678865cdf110a26a4c4132" xmi:type="uml:Property">
+          <name>dateEntered</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a7f19d6218536432ba526f01829ef33b1803" xmi:type="uml:Property">
+          <name>label</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o991789f415cb4ddeb9beb27ef479e084220" xmi:type="uml:Operation">
+          <name>comments</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o991789f415cb4ddeb9beb27ef479e084220_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o737217a3a7f142daa1cafa504e4ee1b3724" xmi:type="uml:Operation">
+          <name>dateEntered</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o737217a3a7f142daa1cafa504e4ee1b3724_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o73f67e28f14340e185ea7cb9b87f6304259" xmi:type="uml:Operation">
+          <name>label</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o73f67e28f14340e185ea7cb9b87f6304259_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o69508e5d235443018305a679920a0c97270" xmi:type="uml:Operation">
+          <name>application</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o69508e5d235443018305a679920a0c97270_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:id="di585526670897986403" xmi:type="uml:Class">
+        <name>SRSSampleLocation</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="aa370dfb9cee445bd9804da86a40924f0432" xmi:type="uml:Property">
+          <name>freezerType</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="afb165e670a9145a3a19ec3d07e806389455" xmi:type="uml:Property">
+          <name>freezerLocation</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ad4a61d7b94ba4fb7a81cbbefa0ce6850837" xmi:type="uml:Property">
+          <name>samples</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o595fb2baf8674b4ca93ce22046766ad8288" xmi:type="uml:Operation">
+          <name>freezerType</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o595fb2baf8674b4ca93ce22046766ad8288_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="obfeaef12c58644ecb1e9693441688442495" xmi:type="uml:Operation">
+          <name>freezerLocation</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="obfeaef12c58644ecb1e9693441688442495_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="o9dc3b3e926874b4cb1cf4135d804db03852" xmi:type="uml:Operation">
+          <name>samples</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o9dc3b3e926874b4cb1cf4135d804db03852_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedAttribute xmi:id="di206771580874484484_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di533626477554280719" />
+          <association xmi:idref="di206771580874484484" />
+          <aggregation>composite</aggregation>
+        </ownedAttribute>
+        <generalization xmi:id="di621995489151590871" xmi:type="uml:Generalization">
+          <general xmi:idref="di636599701409539479" />
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:id="di206771580874484484" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di206771580874484484_er" />
+        <memberEnd xmi:idref="di206771580874484484_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di219602558644580521" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di219602558644580521_er" />
+        <memberEnd xmi:idref="di219602558644580521_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di860661463197406296" xmi:type="uml:Class">
+        <name>SRSDiagnosticTest</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="ac5677d4fd11f468e819a8275b1f1749a435" xmi:type="uml:Property">
+          <name>methodName</name>
+          <visibility>private</visibility>
+        </ownedAttribute>
+        <ownedOperation xmi:id="o451a814eb66244018cf3b59c55ba1a9d131" xmi:type="uml:Operation">
+          <name>methodName</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o451a814eb66244018cf3b59c55ba1a9d131_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di993804830131594768" xmi:type="uml:Generalization">
+          <general xmi:idref="di636599701409539479" />
+        </generalization>
+        <ownedAttribute xmi:id="di553287720621915995_sr" xmi:type="uml:Property">
+          <visibility>package</visibility>
+          <type xmi:idref="di792420281424052451" />
+          <association xmi:idref="di553287720621915995" />
+          <aggregation>shared</aggregation>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:id="di553287720621915995" xmi:type="uml:Association">
+        <memberEnd xmi:idref="di553287720621915995_er" />
+        <memberEnd xmi:idref="di553287720621915995_sr" />
+      </packagedElement>
+      <packagedElement xmi:id="di956062525568547470" xmi:type="uml:Class">
+        <name>SRSReadyRequest</name>
+        <isAbstract>false</isAbstract>
+        <ownedOperation xmi:id="o52854250c4cb486ca1d03e83e65a3234990" xmi:type="uml:Operation">
+          <name>run</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o52854250c4cb486ca1d03e83e65a3234990_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        <generalization xmi:id="di201649261919694031" xmi:type="uml:Generalization">
+          <general xmi:idref="di422642237595463267" />
+        </generalization>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:id="Python.str" xmi:type="uml:DataType">
+      <name>str</name>
+    </packagedElement>
+    <packagedElement xmi:id="Python.bool" xmi:type="uml:DataType">
+      <name>bool</name>
+    </packagedElement>
+    <packagedElement xmi:id="Python.int" xmi:type="uml:DataType">
+      <name>int</name>
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>
