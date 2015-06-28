@@ -1,2 +1,4 @@
-# Kinship
-Repositorio para grupo IGEVET
+SRS
+===
+
+Software para Resolución de Requerimientos (IGEVET)
