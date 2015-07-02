@@ -7,3 +7,10 @@
 		self.__password = password
 		self.__dni = dni
 		print "init_:end"
+
+	def name(self):
+		self.__name = name
+		
+	def password(self):
+		self.__password = password
+	

@@ -1,19 +1,13 @@
-﻿
-class SRSObject:    
-    __comments = 0
-    assert(type(__comments)==object)
-    __dateEntered = 0
-    assert(type(__dateEntered)==object)
-    __label = 0
-    assert(type(__label)==object)
+﻿class SRSObject:
+    def __init__(self):
+        pass
 
+    def comments(self, comments):
+        self.__comments = comments
 
-    def publiccomments (self):        
-        # implementation
-    def publicdateEntered (self):        
-        # implementation
-    def publiclabel (self):        
-        # implementation
-    def publicapplication (self):        
-        # implementation
+    def dateentered(self, dateentered):
+        self.__dateentered = dateentered
+
+    def label(self, label):
+        self.__label = label
 
