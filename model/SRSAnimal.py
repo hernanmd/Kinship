@@ -27,8 +27,21 @@
         self.__species = species
         self.__breed = breed
         self.__territory = territory
-        print "init_:end"
-
 
     def animalcode(self, animalcode):
         self.__animalcode = animalcode
+
+    def sex(self):
+        return self.__sex
+
+    def borndate(self):
+        return self.__bornDate
+
+    def species(self):
+        return self.__species
+
+    def breed(self):
+        return self.__breed
+
+    def territory(self):
+        return self.__territory
