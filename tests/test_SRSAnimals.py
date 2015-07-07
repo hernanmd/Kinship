@@ -22,6 +22,11 @@ class TestSRSAnimals(unittest.TestCase):
         for srsanimal in self.srsAnimalsList:
             self.assertIsInstance(srsanimal.borndate(), datetime)
 
+    def test_species(self):
+        self.assertTrue(self.srsAnimalsList[0].species(), "canis lupus")
+        self.assertTrue(self.srsAnimalsList[1].species(), "bos taurus")
+        self.assertTrue(self.srsAnimalsList[-1].species(), "sus scrofa")
+
 if __name__ == '__main__':
     unittest.main()
 

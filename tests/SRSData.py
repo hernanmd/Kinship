@@ -10,11 +10,12 @@ from datetime import datetime
 from model.SRSUser import (SRSUser)
 from model.SRSAnimal import SRSAnimal
 from model.SRSSampleLocation import SRSSampleLocation
+from model.SRSBreed import SRSBreed
 
 srsUserList = []
 srsAnimalsList = []
 srsSampleLocations = []
-
+srsBreedsList = []
 
 class SRSData(object):
     @staticmethod
@@ -51,3 +52,14 @@ class SRSData(object):
                 srsSampleLocations.append(SRSSampleLocation(row[0], row[1], row[2]))
             print "Done"
         return srsSampleLocations
+
+    @staticmethod
+    def readbreedscsv(filename):
+        with open(filename, 'rb') as csvfile:
+            csvreader = csv.reader(csvfile, delimiter = ';')
+            csvreader.next()
+            print "Reading Breeds..."
+            for row in csvreader:
+                srsBreedsList.append(SRSBreed(row[0], row[1]))
+            print "Done"
+        return srsBreedsList

@@ -1,9 +1,9 @@
 codigo;sexo;fechaNacimiento;raza;especie;lugar
 1122;M;06/01/2010;Pitbull;canis lupus;Henderson
-1144;F;12/04/2011;Limousin;bovina;Azul
-2233;F;01/10/2008;Hereford;bovina;Olavarria
-1155;M;02/05/2009;Angus;bovina;Tres Arroyos
-4466;F;30/11/2012;Duroc;porcina;San Nicolas
-4455;M;09/10/2005;Hampshire;porcina;Junin
-5588;M;09/12/2014;Landrance;porcina;Bahia Blanca
-8899;F;18/08/2013;Yorkshine;porcina;Henderson
+1144;F;12/04/2011;Limousin;bos taurus;Azul
+2233;F;01/10/2008;Hereford;bos taurus;Olavarria
+1155;M;02/05/2009;Angus;bos taurus;Tres Arroyos
+4466;F;30/11/2012;Duroc;sus scrofa;San Nicolas
+4455;M;09/10/2005;Hampshire;sus scrofa;Junin
+5588;M;09/12/2014;Landrance;sus scrofa;Bahia Blanca
+8899;F;18/08/2013;Yorkshine;sus scrofa;Henderson
