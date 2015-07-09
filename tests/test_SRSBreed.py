@@ -5,9 +5,9 @@ from model.SRSBreed import SRSBreed
 
 class TestSRSBreed(unittest.TestCase):
     def setUp(self):
-        print "setUp_:begin"
+        print ("setUp_:begin")
         self.srsBreedList = SRSData().readbreedscsv('data\SRS_Breeds.csv')
-        print "setUp_:end"
+        print ("setUp_:end")
 
     def test_create(self):
         for srsBreed in self.srsBreedList:

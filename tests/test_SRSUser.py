@@ -5,9 +5,9 @@ from model.SRSUser import SRSUser
 
 class TestSRSUser(unittest.TestCase):
     def setUp(self):
-        print "setUp_:begin"
+        print ("setUp_:begin")
         self.srsUserList = SRSData().readuserscsv('data\SRS_Users.csv')
-        print "setUp_:end"
+        print ("setUp_:end")
 
     def test_equal(self):
         self.assertEqual('foo'.upper(), 'FOO')

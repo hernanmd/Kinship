@@ -7,7 +7,7 @@ pprint(os.getcwd())
 pprint(sys.path)
 
 from datetime import datetime
-from model.SRSUser import (SRSUser)
+from model.SRSUser import SRSUser
 from model.SRSAnimal import SRSAnimal
 from model.SRSSampleLocation import SRSSampleLocation
 from model.SRSBreed import SRSBreed
@@ -24,10 +24,10 @@ class SRSData(object):
             csvreader = csv.reader(csvfile, delimiter = ';')
             # Skip header line
             csvreader.next()
-            print "Reading CSV file..."
+            print("Reading CSV file...")
             for row in csvreader:
                 srsUserList.append(SRSUser(row[0], row[1], row[2]))
-            print "Done"
+            print ("Done")
         return srsUserList
 
     @staticmethod
@@ -35,11 +35,11 @@ class SRSData(object):
         with open(filename, 'rb') as csvfile:
             csvreader = csv.reader(csvfile, delimiter = ";")
             csvreader.next()
-            print "Reading Animals..."
+            print ("Reading Animals...")
             for row in csvreader:
                 date_object = datetime.strptime(row[2], "%d/%m/%Y")
                 srsAnimalsList.append(SRSAnimal(row[0], row[1], date_object, row[3], row[4], row[5]))
-            print "Done"
+            print ("Done")
         return srsAnimalsList
 
     @staticmethod
@@ -47,10 +47,10 @@ class SRSData(object):
         with open(filename, 'rb') as csvfile:
             csvreader = csv.reader(csvfile, delimiter = ';')
             csvreader.next()
-            print "Reading Sample Locations..."
+            print ("Reading Sample Locations...")
             for row in csvreader:
                 srsSampleLocations.append(SRSSampleLocation(row[0], row[1], row[2]))
-            print "Done"
+            print ("Done")
         return srsSampleLocations
 
     @staticmethod
@@ -58,8 +58,8 @@ class SRSData(object):
         with open(filename, 'rb') as csvfile:
             csvreader = csv.reader(csvfile, delimiter = ';')
             csvreader.next()
-            print "Reading Breeds..."
+            print ("Reading Breeds...")
             for row in csvreader:
                 srsBreedsList.append(SRSBreed(row[0], row[1]))
-            print "Done"
+            print ("Done")
         return srsBreedsList
