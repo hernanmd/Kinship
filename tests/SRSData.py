@@ -63,3 +63,36 @@ class SRSData(object):
                 srsBreedsList.append(SRSBreed(row[0], row[1]))
             print ("Done")
         return srsBreedsList
+
+	@staticmethod
+    def readmarkercsv(filename):
+		with open(filename, 'rb') as csvfile:
+			csvreader = csv.reader(csvfile, delimiter = ';')
+			csvreader.next()
+			print ("Reading Markers...")
+			for row in csvreader:
+				srsMarkerList.append(SRSMarker(row[0], row[1], row[2], row[3], row[4]))
+			print ("Done")
+		return srsMarkerList
+
+	@staticmethod
+    def readrequestcsv(filename):
+		with open(filename, 'rb') as csvfile:
+			csvreader = csv.reader(csvfile, delimiter = ';')
+			csvreader.next()
+			print ("Reading Markers...")
+			for row in csvreader:
+				srsRequestList.append(SRSRequest(row[0], row[1], row[2], row[3], row[4]))
+			print ("Done")
+		return srsRequestList
+		
+	@staticmethod
+    def readrequestsamplecsv(filename):
+		with open(filename, 'rb') as csvfile:
+			csvreader = csv.reader(csvfile, delimiter = ';')
+			csvreader.next()
+			print ("Reading Markers...")
+			for row in csvreader:
+				srsRequesSampletList.append(SRSRequestSample(row[0], row[1], row[2], row[3], row[4]))
+			print ("Done")
+		return srsRequestSampleList

@@ -1,27 +1,25 @@
-﻿
-class SRSMarker:    
-    __sourcePlatform = 0
-    assert(type(__sourcePlatform)==object)
-    __markerName = 0
-    assert(type(__markerName)==object)
-    __markerValue = 0
-    assert(type(__markerValue)==object)
-    __requestSample = 0
-    assert(type(__requestSample)==object)
-    __chromosomeName = 0
-    assert(type(__chromosomeName)==object)
-    __sampleMarkers = 0
-    assert(type(__sampleMarkers)==SRSRequestSample)
+﻿class SRSMarker:
 
+	def __init__(self, sourcePlatform, markerName, markerValue, requestSample, chromosomeName):
+		self.__sourcePlatform = sourcePlatform
+		self.__markerName = markerName
+		self.__markerValue = markerValue
+		self.__requestSample = requestSample
+		self.__chromosomeName = chromosomeName
 
-    def publicsourcePlatform (self):        
-        # implementation
-    def publicmarkerName (self):        
-        # implementation
-    def publicmarkerValue (self):        
-        # implementation
-    def publicrequestSample (self):        
-        # implementation
-    def publicchromosomeName (self):        
-        # implementation
+	def sourcePlatform(self, sourcePlatform):
+		self.__sourcePlatform = sourcePlatform
+
+	def markerName(self):
+		return self.__markerName
+
+	def markerValue(self):
+		return self.__markerValue
+
+	def requestSample(self):
+		return self.__requestSample
+		
+	def chromosomeName(self):
+		return self.__chromosomeName
+
 
