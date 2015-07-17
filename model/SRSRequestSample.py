@@ -1,49 +1,41 @@
 ﻿
-class SRSRequestSample(SRSObject):    
-    __sampleRuns = 0
-    assert(type(__sampleRuns)==object)
-    __sampleMarkers = 0
-    assert(type(__sampleMarkers)==object)
-    __sampleIndividual = 0
-    assert(type(__sampleIndividual)==object)
-    __sampleCode = 0
-    assert(type(__sampleCode)==object)
-    __sampleCreationDate = 0
-    assert(type(__sampleCreationDate)==object)
-    __sampleBarCode = 0
-    assert(type(__sampleBarCode)==object)
-    __dateEntered = 0
-    assert(type(__dateEntered)==object)
-    __receivedBy = 0
-    assert(type(__receivedBy)==object)
-    __location = 0
-    assert(type(__location)==object)
-    __requestSample = 0
-    assert(type(__requestSample)==SRSMarker)
-    __requestSamples = 0
-    assert(type(__requestSamples)==SRSRequest)
-    __sample = 0
-    assert(type(__sample)==SRSRun)
-    __samples = 0
-    assert(type(__samples)==SRSSampleLocation)
+class SRSRequestSample:    
 
+def __init__(self, sampleRuns, sampleMarkers, sampleIndividual, sampleCode, sampleCreationDate, sampleBarCode, dateEntered, receivedBy, location):
+        self.__sampleRuns = sampleRuns
+        self.__sampleMarkers = sampleMarkers
+        self.__sampleIndividual = sampleIndividual
+        self.__sampleCode = sampleCode
+        self.__sampleCreationDate = sampleCreationDate
+        self.__sampleBarCode = sampleBarCode
+        self.__dateEntered = dateEntered
+        self.__receivedBy = receivedBy
+        self.__location = location
+        
+def sampleRuns(self):
+    return self.__sampleRuns
 
-    def publicsampleMarkers (self):        
-        # implementation
-    def publicsampleRuns (self):        
-        # implementation
-    def publicsampleIndividual (self):        
-        # implementation
-    def publicsampleCreationDate (self):        
-        # implementation
-    def publicsampleCode (self):        
-        # implementation
-    def publicsampleRequest (self):        
-        # implementation
-    def publicsampleBarCode (self):        
-        # implementation
-    def publicreceivedBy (self):        
-        # implementation
-    def publiclocation (self):        
-        # implementation
+def sampleMarkers(self):
+    return self.__sampleMarkers
+
+def sampleIndividual(self):
+    return self.__sampleIndividual
+
+def sampleCode(self):
+    return self.__sampleCode
+
+def sampleCreationDate(self):
+    return self.__sampleCreationDate
+
+def sampleBarCode(self):
+    return self.__sampleBarCode
+
+def dateEntered(self):
+    return self.__dateEntered
+
+def receivedBy(self):
+    return self.__receivedBy
+
+def location(self):
+    return self.__location
 

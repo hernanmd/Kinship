@@ -1,51 +1,29 @@
 ﻿
-class SRSRequest(SRSObject):    
-    __requestState = 0
-    assert(type(__requestState)==object)
-    __requestName = 0
-    assert(type(__requestName)==object)
-    __requestOwner = 0
-    assert(type(__requestOwner)==object)
-    __requestReport = 0
-    assert(type(__requestReport)==object)
-    __sampleRequest = 0
-    assert(type(__sampleRequest)==SRSRequestSample)
-    __requestOwner = 0
-    assert(type(__requestOwner)==SRSRequestState)
-    publicrequests = 0
-    assert(type(publicrequests)==SRSApplication)
+class SRSRequest:    
 
+    def __init__(self, requestState, requestName, requestOwner, requestReport):
+        self.__requestState = requestState
+        self.__requestName = requestName
+        self.__requestOwner = requestOwner
+        self.__requestReport = requestReport
 
-    def publicrenameRequest (self):        
-        # implementation
-    def publicrequestOwner (self):        
-        # implementation
-    def publiccancelRequest (self):        
-        # implementation
-    def publicexecuteRequest (self):        
-        # implementation
-    def publicfinalizeRequest (self):        
-        # implementation
-    def publiccancelRequest (self):        
-        # implementation
-    def publicpauseRequest (self):        
-        # implementation
-    def publicreport (self):        
-        # implementation
-    def publicsamples (self):        
-        # implementation
-    def publicisReported (self):        
-        # implementation
-    def publicisFinished (self):        
-        # implementation
-    def publicisCanceled (self):        
-        # implementation
-    def publicisInvalid (self):        
-        # implementation
-    def publicisRunning (self):        
-        # implementation
-    def publicisPaid (self):        
-        # implementation
-    def publicvalidStates (self):        
-        # implementation
+    def requestState(self):
+       return self.__requestState
 
+    def requestName(self, requestName):
+        self.__requestName = requestName
+
+    def requestName(self):
+        return self.__requestName
+
+    def requestOwner(self, requestOwner):
+        self.__requestOwner = requestOwner
+
+    def requestOwner(self):
+        return self.__requestOwner
+
+    def requestReport(self, requestReport):
+        self.__requestReport = requestReport
+
+    def requestReport(self):
+        return self.__requestReport
